@@ -30,6 +30,3 @@ class PassengerDetailsModel(models.Model):
 class ReservationModel(models.Model):
     flight = models.oneToOneField(FlightDetailsModel, on_delete=models.CASCADE)
     passenger = models.OneToOneField(PassengerDetailsModel, on_delete=models.CASCADE)
-
-
-
