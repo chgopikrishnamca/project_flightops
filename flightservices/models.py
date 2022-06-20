@@ -6,7 +6,6 @@ def ValidateFields(passengerPhone):
     if len(passengerPhone)!=10:
         return Response("Conatct Number Invalid")
 
-
 class FlightDetailsModel(models.Model):
     """ Flight Details Model"""
     flightNum = models.IntegerField()

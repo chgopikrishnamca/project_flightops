@@ -20,12 +20,13 @@ from flightservices import views
 
 router = DefaultRouter()
 """Adding Viewsets/views from views.py in flightservices app to router"""
-router.register('flightDeails', views.FlightViewSet)
+router.register('flightDetails', views.FlightViewSet)
 router.register('passengerDetails', views.PassengerViewSet)
 router.register('reservation', views.ReservationViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('flightServices/', include(router.urls))
+    path('flightServices/', include(router.urls)),
+    path('flightServices/findFlights/', views.findFlights),
 ]
